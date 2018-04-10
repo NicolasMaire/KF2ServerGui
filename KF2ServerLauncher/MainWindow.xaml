@@ -20,8 +20,8 @@
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
 
-        <Label Name="mapLabel" Grid.Column="0" Grid.Row="0">Map :</Label>
-        <ComboBox Name="mapComboBox" Grid.Column="1" Grid.Row="0">
+        <Label Name="mapLabel" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Right" Margin="5">Map :</Label>
+        <ComboBox Name="mapComboBox" Grid.Column="1" Grid.Row="0" Margin="5">
             <ComboBoxItem IsSelected="True">KF-BioticsLab</ComboBoxItem>
             <ComboBoxItem>KF-BlackForest</ComboBoxItem>
             <ComboBoxItem>KF-BurningParis</ComboBoxItem>
@@ -39,16 +39,16 @@
             <ComboBoxItem>KF-ZedLanding</ComboBoxItem>
         </ComboBox>
 
-        <Label Name="difficultyLabel" Grid.Column="0" Grid.Row="1">Difficulty :</Label>
-        <ComboBox Name="difficultyComboBox" Grid.Column="1" Grid.Row="1">
+        <Label Name="difficultyLabel" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Right" Margin="5">Difficulty :</Label>
+        <ComboBox Name="difficultyComboBox" Grid.Column="1" Grid.Row="1" Margin="5">
             <ComboBoxItem IsSelected="True">0</ComboBoxItem>
             <ComboBoxItem>1</ComboBoxItem>
             <ComboBoxItem>2</ComboBoxItem>
             <ComboBoxItem>3</ComboBoxItem>
         </ComboBox>
 
-        <Label Name="maxPlayersLabel" Grid.Column="0" Grid.Row="2">Max players :</Label>
-        <ComboBox Name="maxPlayersComboBox" Grid.Column="1" Grid.Row="2">
+        <Label Name="maxPlayersLabel" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Right" Margin="5">Max players :</Label>
+        <ComboBox Name="maxPlayersComboBox" Grid.Column="1" Grid.Row="2" Margin="5">
             <ComboBoxItem>1</ComboBoxItem>
             <ComboBoxItem>2</ComboBoxItem>
             <ComboBoxItem>3</ComboBoxItem>
@@ -59,12 +59,12 @@
             <ComboBoxItem>8</ComboBoxItem>
         </ComboBox>
 
-        <Label Name="isLanMatchLabel" Grid.Column="0" Grid.Row="3">Lan Match ?</Label>
-        <CheckBox Name="isLanMatchCheckBox" Grid.Column="1" Grid.Row="3" IsChecked="True"/>
+        <Label Name="isLanMatchLabel" Grid.Column="0" Grid.Row="3" HorizontalAlignment="Right" Margin="5">Lan Match ?</Label>
+        <CheckBox Name="isLanMatchCheckBox" Grid.Column="1" Grid.Row="3" IsChecked="True" Margin="5"/>
 
         <WrapPanel Grid.Row="4" Grid.ColumnSpan="2" HorizontalAlignment="Right" Margin="0,15,0,0">
-            <Button Content="Start" Name="StartButton" Click="StartButton_Click" MinWidth="60" Margin="0,0,10,0"/>
-            <Button Content="Quit" Name="QuitButton" Click="QuitButton_Click" MinWidth="60" Margin="10,0,10,0"/>
+            <Button Content="Start" Name="StartButton" Click="StartButton_Click" MinWidth="60" Margin="10,0"/>
+            <Button Content="Quit" Name="QuitButton" Click="QuitButton_Click" MinWidth="60" Margin="10,0"/>
         </WrapPanel>
 
     </Grid>
