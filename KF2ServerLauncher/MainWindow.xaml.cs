@@ -16,6 +16,13 @@ namespace KF2ServerLauncher
             InitializeComponent();
         }
 
+        private void RandomMapPick_Click(object sender, RoutedEventArgs e)
+        {
+            Random randomGen = new Random();
+
+            mapComboBox.SelectedIndex = randomGen.Next(0, mapComboBox.Items.Count);
+        }
+
         private void StartButton_Click(object sender, RoutedEventArgs e)
         {
             string serverExecutablePath = @".\Binaries\Win64\KFServer.exe";
