@@ -35,15 +35,20 @@
                 <ComboBoxItem>KF-BurningParis</ComboBoxItem>
                 <ComboBoxItem>KF-Catacombs</ComboBoxItem>
                 <ComboBoxItem>KF-ContainmentStation</ComboBoxItem>
+                <ComboBoxItem>KF-DieSector</ComboBoxItem>
                 <ComboBoxItem>KF-EvacuationPoint</ComboBoxItem>
                 <ComboBoxItem>KF-Farmhouse</ComboBoxItem>
                 <ComboBoxItem>KF-HostileGrounds</ComboBoxItem>
                 <ComboBoxItem>KF-InfernalRealm</ComboBoxItem>
+                <ComboBoxItem>KF-KrampusLair</ComboBoxItem>
                 <ComboBoxItem>KF-VolterManor</ComboBoxItem>
+                <ComboBoxItem>KF-Nightmare</ComboBoxItem>
                 <ComboBoxItem>KF-Nuked</ComboBoxItem>
                 <ComboBoxItem>KF-Outpost</ComboBoxItem>
+                <ComboBoxItem>KF-PowerCore_Holdout</ComboBoxItem>
                 <ComboBoxItem>KF-Prison</ComboBoxItem>
                 <ComboBoxItem>KF-TheDescent</ComboBoxItem>
+                <ComboBoxItem>KF-TragicKingdom</ComboBoxItem>
                 <ComboBoxItem>KF-ZedLanding</ComboBoxItem>
             </ComboBox>
             <Button Content="Random pick" Name="RandomMapPick" Click="RandomMapPick_Click" Grid.Column="2"/>
