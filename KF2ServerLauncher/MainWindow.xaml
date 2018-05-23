@@ -18,6 +18,8 @@
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
 
         <Label Name="mapLabel" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Right" Margin="5">Map :</Label>
@@ -54,16 +56,31 @@
             <Button Content="Random pick" Name="RandomMapPick" Click="RandomMapPick_Click" Grid.Column="2"/>
         </Grid>
 
-        <Label Name="difficultyLabel" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Right" Margin="5">Difficulty :</Label>
-        <ComboBox Name="difficultyComboBox" Grid.Column="1" Grid.Row="1" Margin="5">
-            <ComboBoxItem IsSelected="True">0</ComboBoxItem>
-            <ComboBoxItem>1</ComboBoxItem>
-            <ComboBoxItem>2</ComboBoxItem>
-            <ComboBoxItem>3</ComboBoxItem>
+        <Label Name="modeLabel" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Right" Margin="5">Mode :</Label>
+        <ComboBox Name="modeComboBox" Grid.Column="1" Grid.Row="1" Margin="5">
+            <ComboBoxItem Tag="KFGameContent.KFGameInfo_Survival" IsSelected="True">Survival</ComboBoxItem>
+            <ComboBoxItem Tag="KFGameContent.KFGameInfo_WeeklySurvival">Weekly</ComboBoxItem>
+            <ComboBoxItem Tag="KFGameContent.KFGameInfo_VersusSurvival">Versus</ComboBoxItem>
+            <ComboBoxItem Tag="KFGameContent.KFGameInfo_Endless">Endless</ComboBoxItem>
         </ComboBox>
 
-        <Label Name="maxPlayersLabel" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Right" Margin="5">Max players :</Label>
-        <ComboBox Name="maxPlayersComboBox" Grid.Column="1" Grid.Row="2" Margin="5">
+        <Label Name="lengthLabel" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Right" Margin="5">Length :</Label>
+        <ComboBox Name="lengthComboBox" Grid.Column="1" Grid.Row="2" Margin="5">
+            <ComboBoxItem Tag="0">Short (4 waves)</ComboBoxItem>
+            <ComboBoxItem Tag="1" IsSelected="True">Medium (7 waves)</ComboBoxItem>
+            <ComboBoxItem Tag="2">Long (10 waves)</ComboBoxItem>
+        </ComboBox>
+
+        <Label Name="difficultyLabel" Grid.Column="0" Grid.Row="3" HorizontalAlignment="Right" Margin="5">Difficulty :</Label>
+        <ComboBox Name="difficultyComboBox" Grid.Column="1" Grid.Row="3" Margin="5">
+            <ComboBoxItem Tag="0">Normal</ComboBoxItem>
+            <ComboBoxItem Tag="1">Hard</ComboBoxItem>
+            <ComboBoxItem Tag="2" IsSelected="True">Suicidal</ComboBoxItem>
+            <ComboBoxItem Tag="3">Hell on earth</ComboBoxItem>
+        </ComboBox>
+
+        <Label Name="maxPlayersLabel" Grid.Column="0" Grid.Row="4" HorizontalAlignment="Right" Margin="5">Max players :</Label>
+        <ComboBox Name="maxPlayersComboBox" Grid.Column="1" Grid.Row="4" Margin="5">
             <ComboBoxItem>1</ComboBoxItem>
             <ComboBoxItem>2</ComboBoxItem>
             <ComboBoxItem>3</ComboBoxItem>
@@ -74,10 +91,10 @@
             <ComboBoxItem>8</ComboBoxItem>
         </ComboBox>
 
-        <Label Name="isLanMatchLabel" Grid.Column="0" Grid.Row="3" HorizontalAlignment="Right" Margin="5">Lan Match ?</Label>
-        <CheckBox Name="isLanMatchCheckBox" Grid.Column="1" Grid.Row="3" IsChecked="True" Margin="5"/>
+        <Label Name="isLanMatchLabel" Grid.Column="0" Grid.Row="5" HorizontalAlignment="Right" Margin="5">Lan Match ?</Label>
+        <CheckBox Name="isLanMatchCheckBox" Grid.Column="1" Grid.Row="5" IsChecked="True" Margin="5"/>
 
-        <WrapPanel Grid.Row="4" Grid.ColumnSpan="2" HorizontalAlignment="Right" Margin="0,15,0,0">
+        <WrapPanel Grid.Row="6" Grid.ColumnSpan="2" HorizontalAlignment="Right" Margin="0,15,0,0">
             <Button Content="Start" Name="StartButton" Click="StartButton_Click" MinWidth="60" Margin="10,0"/>
             <Button Content="Quit" Name="QuitButton" Click="QuitButton_Click" MinWidth="60" Margin="10,0"/>
         </WrapPanel>

@@ -30,11 +30,13 @@ namespace KF2ServerLauncher
             if (System.IO.File.Exists(serverExecutablePath))
             {
                 string map = (string)((ComboBoxItem)mapComboBox.SelectedItem).Content + ".kfm";
-                string difficulty = (string)((ComboBoxItem)difficultyComboBox.SelectedItem).Content;
+                string mode = (string)((ComboBoxItem)modeComboBox.SelectedItem).Tag;
+                string length = (string)((ComboBoxItem)lengthComboBox.SelectedItem).Tag;
+                string difficulty = (string)((ComboBoxItem)difficultyComboBox.SelectedItem).Tag;
                 string maxPlayers = (string)((ComboBoxItem)maxPlayersComboBox.SelectedItem).Content;
                 string isLanMatch = isLanMatchCheckBox.IsChecked.HasValue ? (isLanMatchCheckBox.IsChecked.Value ? "True" : "False") : "False";
 
-                string cmdText = "/C start " + serverExecutablePath + " " + map + "?adminpassword=123?Difficulty=" + difficulty + "?MaxPlayers=" + maxPlayers + "?bIsLanMatch=" + isLanMatch;
+                string cmdText = "/C start " + serverExecutablePath + " " + map + "?adminpassword=123?Game=" + mode + "?GameLength=" + length + "?Difficulty=" + difficulty + "?MaxPlayers=" + maxPlayers + "?bIsLanMatch=" + isLanMatch;
 
                 System.Diagnostics.Process.Start("cmd.exe", cmdText);
             }
